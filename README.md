@@ -38,9 +38,9 @@ Após compilar e executar o programa, você pode usar as seguintes opções para
 1. **Adicionar Usuário**:
     - Siga as instruções no prompt para inserir os detalhes do novo usuário.
 2. **Remover Usuário**:
-    - Insira o ID ou nome do usuário que deseja remover.
+    - Insira o ID do usuário que deseja remover.
 3. **Editar Usuário**:
-    - Insira o ID ou nome do usuário que deseja editar e forneça os novos detalhes.
+    - Insira o ID do usuário que deseja editar e forneça os novos detalhes.
 4. **Visualizar Lista de Usuários**:
     - Veja a lista completa de todos os usuários registrados.
 
