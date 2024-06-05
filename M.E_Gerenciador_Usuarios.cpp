@@ -12,86 +12,86 @@ void msgInicio() {
 
 // Exibe uma mensagem ao finalizar o programa
 void msgFinal() {
-    cout << "\nObrigado por usar o sistema. AtÈ logo!" << endl;
+    cout << "\nObrigado por usar o sistema. At√© logo!" << endl;
 }
 
-// Cadastra o usu·rio
+// Cadastra o usu√°rio
 void cadastrarUsuario(vector<string>& lista) {
     string nome;
-    cout << "\nDigite o nome do usu·rio: ";
+    cout << "\nDigite o nome do usu√°rio: ";
     cin.ignore(); // Cimpa o buffer do cin pra evitar problemas com o getline
     getline(cin, nome);
     lista.push_back(nome);
-    cout << "\nUsu·rio cadastrado com sucesso!" << endl;
+    cout << "\nUsu√°rio cadastrado com sucesso!" << endl;
 }
 
-// Exibe a lista de usu·rios cadastrados
+// Exibe a lista de usu√°rios cadastrados
 void exibirLista(const vector<string>& lista) {
     if (lista.empty()) {
-        cout << "\nNenhum usu·rio cadastrado." << endl;
+        cout << "\nNenhum usu√°rio cadastrado." << endl;
     } else {
-        cout << "\nLista de usu·rios cadastrados:" << endl;
+        cout << "\nLista de usu√°rios cadastrados:" << endl;
         for (size_t i = 0; i < lista.size(); ++i) {
             cout << i + 1 << ". " << lista[i] << endl;
         }
     }
 }
 
-// Remove um usu·rio da lista
+// Remove um usu√°rio da lista
 void removerUsuario(vector<string>& lista) {
     if (lista.empty()) {
-        cout << "\nA lista est· vazia, n„o tem usu·rios para serem removidos." << endl;
+        cout << "\nA lista est√° vazia, n√£o tem usu√°rios para serem removidos." << endl;
         return;
     }
 
     size_t num_usuarioDel;
     exibirLista(lista);
-    cout << "\nDigite o n˙mero do usu·rio a ser removido: ";
+    cout << "\nDigite o n√∫mero do usu√°rio a ser removido: ";
     cin >> num_usuarioDel;
 
-    // Verifica se o n˙mero do usu·rio È v·lido
+    // Verifica se o n√∫mero do usu√°rio √© v√°lido
     if (num_usuarioDel < 1 || num_usuarioDel > lista.size()) {
-        cout << "\nUsu·rio inexistente." << endl;
+        cout << "\nUsu√°rio inexistente." << endl;
     } else {
         lista.erase(lista.begin() + num_usuarioDel - 1);
-        cout << "\nO usu·rio foi removido com sucesso!" << endl;
+        cout << "\nO usu√°rio foi removido com sucesso!" << endl;
     }
 }
 
-// Edita o usu·rio, ou seja, reescreve outro no lugar
+// Edita o usu√°rio, ou seja, reescreve outro no lugar
 void editarUsuario(vector<string>& lista) {
     if (lista.empty()) {
-        cout << "\nA lista est· vazia, n„o tem usu·rios para serem editados." << endl;
+        cout << "\nA lista est√° vazia, n√£o tem usu√°rios para serem editados." << endl;
         return;
     }
 
     string usuarioEdit;
     size_t num_usuarioEdit;
     exibirLista(lista);
-    cout << "\nDigite o n˙mero do usu·rio a ser editado: ";
+    cout << "\nDigite o n√∫mero do usu√°rio a ser editado: ";
     cin >> num_usuarioEdit;
 
-     // Verifica se o n˙mero do usu·rio È v·lido
+     // Verifica se o n√∫mero do usu√°rio √© v√°lido
     if (num_usuarioEdit < 1 || num_usuarioEdit > lista.size()) {
-        cout << "\nUsu·rio inexistente." << endl;
+        cout << "\nUsu√°rio inexistente." << endl;
     } else {
         cin.ignore(); // Limpa o buffer do cin pra evitar problemas com o getline
-        cout << "\nDigite o novo nome do usu·rio: ";
+        cout << "\nDigite o novo nome do usu√°rio: ";
         getline(cin, usuarioEdit);
-        lista[num_usuarioEdit - 1] = usuarioEdit; // Atualiza o usu·rio na lista
-        cout << "\nO usu·rio foi editado com sucesso!" << endl;
+        lista[num_usuarioEdit - 1] = usuarioEdit; // Atualiza o usu√°rio na lista
+        cout << "\nO usu√°rio foi editado com sucesso!" << endl;
     }
 }
 
 // Exibe o menu de escolhas
 void exibirMenu() {
-    cout << "\nMenu de opÁıes:" << endl;
-    cout << "1. Cadastrar usu·rio" << endl;
-    cout << "2. Exibir lista de usu·rios" << endl;
-    cout << "3. Remover usu·rio" << endl;
-    cout << "4. Editar usu·rio" << endl;
+    cout << "\nMenu de op√ß√µes:" << endl;
+    cout << "1. Cadastrar usu√°rio" << endl;
+    cout << "2. Exibir lista de usu√°rios" << endl;
+    cout << "3. Remover usu√°rio" << endl;
+    cout << "4. Editar usu√°rio" << endl;
     cout << "5. Sair do sistema" << endl;
-    cout << "Escolha uma opÁ„o: ";
+    cout << "Escolha uma op√ß√£o: ";
 }
 
 // Executa o sistema
@@ -101,12 +101,12 @@ void executarSistema() {
 
     msgInicio();
 
-    // Executa infinitamente atÈ o usu·rio escolher a opÁ„o de sair do programa
+    // Executa infinitamente at√© o usu√°rio escolher a op√ß√£o de sair do programa
     while (true) {
         exibirMenu();
         cin >> opcao;
 
-        // Executa de acordo com a escolha do usu·rio
+        // Executa de acordo com a escolha do usu√°rio
         switch (opcao) {
             case 1:
                 cadastrarUsuario(listaUsuarios);
@@ -124,13 +124,13 @@ void executarSistema() {
                 msgFinal();
                 return; // Sai do loop e encerra o programa
             default:
-                cout << "\nOpÁ„o inv·lida! Por favor, escolha uma opÁ„o v·lida." << endl;
+                cout << "\nOp√ß√£o inv√°lida! Por favor, escolha uma op√ß√£o v√°lida." << endl;
                 break;
         }
     }
 }
 
-// Chama a funÁ„o, executando todo o sistema
+// Chama a fun√ß√£o, executando todo o sistema
 int main() {
     setlocale(LC_ALL, "portuguese");
     executarSistema();
