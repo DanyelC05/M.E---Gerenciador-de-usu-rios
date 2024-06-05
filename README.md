@@ -36,7 +36,7 @@
 Após compilar e executar o programa, você pode usar as seguintes opções para gerenciar os usuários:
 
 1. **Adicionar Usuário**:
-    - Siga as instruções no prompt para inserir os detalhes do novo usuário.
+    - Siga as instruções no prompt para inserir o nome do novo usuário.
 2. **Remover Usuário**:
     - Insira o ID do usuário que deseja remover.
 3. **Editar Usuário**:
